@@ -5,16 +5,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShoppingCartAppTest {
 
     @Test
-    public void testCalculateTotalCost() {
+    public void testCalculateItemCost() {
         ShoppingCartApp shoppingCart = new ShoppingCartApp();
         // Test case 1: Normal values
-        assertEquals(100.00, shoppingCart.calculateTotalCost(10.0, 10), 0.01);
+        assertEquals(100.00, shoppingCart.calculateItemCost(10.0, 10), 0.01);
 
         // Test case 2: Zero price (should return 0)
-        assertEquals(0.00, shoppingCart.calculateTotalCost(0.0, 10), 0.01);
+        assertEquals(0.00, shoppingCart.calculateItemCost(0.0, 10), 0.01);
 
         // Test case 3: Zero quantity (should return 0)
-        assertEquals(0.00, shoppingCart.calculateTotalCost(10.0, 0), 0.01);
+        assertEquals(0.00, shoppingCart.calculateItemCost(10.0, 0), 0.01);
     }
 
 }

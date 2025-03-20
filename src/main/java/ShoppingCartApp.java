@@ -3,7 +3,7 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 public class ShoppingCartApp {
-    public double calculateTotalCost(double price, int quantity){
+    public double calculateItemCost(double price, int quantity){
         return price * quantity;
     }
     public static void main(String [] args){
@@ -41,7 +41,7 @@ public class ShoppingCartApp {
             double price = scanner.nextDouble();
             System.out.println(rb.getString("quantity"));
             int quantity = scanner.nextInt();
-            total += shoppingCart.calculateTotalCost(price, quantity);
+            total += shoppingCart.calculateItemCost(price, quantity);
         }
         System.out.println(rb.getString("total") + total);
     }
